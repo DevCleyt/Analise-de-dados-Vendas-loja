@@ -1,207 +1,85 @@
 # 📊 Análise de Vendas de Rede de Lojas
 
-Projeto desenvolvido em Python utilizando Pandas, NumPy e Matplotlib para realizar limpeza, tratamento, análise e visualização de dados de vendas de uma rede de lojas.
+Projeto de **Análise Exploratória de Dados (EDA)** desenvolvido em Python para transformar dados de vendas em indicadores e insights de negócio.
 
----
+## 🎯 Problema de negócio
 
-## 🧠 Mapa Mental do Projeto
+A análise busca responder perguntas como:
+
+- Quais lojas apresentam maior e menor faturamento?
+- Quais produtos possuem maior volume de vendas?
+- Quais lojas atingiram suas metas?
+- Como o faturamento evolui ao longo do tempo?
+- Como as vendas se distribuem por cidade e região?
+
+## 🛠️ Tecnologias
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Jupyter Notebook
+
+## 🔄 Processo de análise
+
+**Dados brutos → Limpeza → Tratamento → Métricas → EDA → Visualização → Insights**
+
+### Tratamento dos dados
+
+- Tratamento de valores nulos
+- Conversão e padronização de datas
+- Padronização de dados textuais
+- Remoção de duplicidades
+- Ajuste de tipos de dados
+- Integração das informações de vendas, lojas e metas
+
+### Métricas e análises
+
+- Faturamento por loja
+- Faturamento por cidade e região
+- Produtos mais vendidos
+- Evolução mensal das vendas
+- Comparação entre faturamento e metas
+- Ranking de desempenho das lojas
+
+## 📈 Visualizações
+
+O projeto utiliza gráficos para facilitar a interpretação dos principais indicadores, incluindo ranking de lojas, produtos mais vendidos e evolução do faturamento.
 
 <p align="center">
-  <img src="mapa_mental.png" alt="Mapa Mental do Projeto" width="100%">
+  <img src="mapa_mental.png" alt="Mapa mental do projeto" width="100%">
 </p>
 
----
+## 💡 Resultados
 
-## 🎯 Objetivo
+A análise permite identificar diferenças de desempenho entre lojas, produtos de maior saída, evolução do faturamento e lojas que atingiram ou não seus objetivos comerciais.
 
-Realizar uma análise exploratória dos dados de vendas para identificar padrões de faturamento, desempenho das lojas, comparação com metas e geração de insights para apoio à tomada de decisão.
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Jupyter Notebook
-
----
-
-## 📂 Base de Dados
-
-O projeto utiliza dados relacionados a:
-
-* Vendas realizadas
-* Produtos comercializados
-* Quantidade vendida
-* Preço unitário
-* Datas das vendas
-* Metas dos gerentes
-* Informações das lojas
-
----
-
-## 🔄 Fluxo da Análise
-
-### 1️⃣ Importação das Bibliotecas
-
-```python
-import pandas as pd
-import numpy as np
-from datetime import datetime
-from matplotlib import pyplot as plt
-```
-
----
-
-### 2️⃣ Leitura dos Arquivos
-
-```python
-vendas_df = pd.read_csv('vendasTech.csv')
-gerente_lojas_df = pd.read_excel('gerente_lojas.xlsx')
-```
-
----
-
-### 3️⃣ Limpeza e Tratamento dos Dados
-
-* Tratamento de valores nulos
-* Conversão de datas
-* Padronização de texto
-* Remoção de duplicados
-* Ajuste de tipos de dados
-
----
-
-### 4️⃣ Criação de Métricas
-
-Criação da coluna de faturamento:
-
-```python
-vendas_df['Faturamento'] = (
-    vendas_df['Qtd'] *
-    vendas_df['Preco_Unitario']
-)
-```
-
-Mapeamento das regiões das lojas.
-
----
-
-### 5️⃣ Análises Realizadas
-
-#### Faturamento por Loja
-
-* Ranking das lojas
-* Comparação de desempenho
-
-#### Faturamento por Cidade
-
-* São Paulo
-* Rio de Janeiro
-
-#### Produtos Mais Vendidos
-
-* Quantidade por produto
-* Ranking de vendas
-
-#### Análise Temporal
-
-* Faturamento por mês
-* Evolução das vendas
-
-#### Metas dos Gerentes
-
-* Comparação entre faturamento e meta
-* Identificação das lojas que atingiram os objetivos
-
----
-
-## 📈 Principais Insights
-
-✔ Identificação das lojas com maior faturamento
-
-✔ Identificação das lojas com menor faturamento
-
-✔ Produtos mais vendidos
-
-✔ Comparação entre metas e resultados
-
-✔ Distribuição das vendas por região
-
-✔ Evolução do faturamento ao longo do tempo
-
----
-
-## 📊 Visualizações
-
-O projeto gera gráficos para facilitar a interpretação dos dados:
-
-* Produtos mais vendidos
-* Faturamento por mês
-* Ranking de faturamento por loja
-
----
-
-## 🚀 Como Executar
-
-### Clone o repositório
+## 🚀 Como executar
 
 ```bash
-git clone https://github.com/seu-usuario/analise-vendas-lojas-python.git
-```
-
-### Acesse a pasta
-
-```bash
-cd analise-vendas-lojas-python
-```
-
-### Instale as dependências
-
-```bash
-pip install pandas numpy matplotlib openpyxl
-```
-
-### Execute o Notebook
-
-```bash
+git clone https://github.com/DevCleyt/Analise-de-dados-Vendas-loja.git
+cd Analise-de-dados-Vendas-loja
+pip install pandas numpy matplotlib openpyxl jupyter
 jupyter notebook
 ```
 
-Abra:
+Depois, abra o notebook `analiseLoja.ipynb`.
 
-```text
-analiseLoja.ipynb
-```
+## 📚 Conceitos aplicados
 
----
-
-## 📚 Conceitos Aplicados
-
-* Análise Exploratória de Dados (EDA)
-* Limpeza de Dados
-* Engenharia de Dados
-* Manipulação com Pandas
-* GroupBy
-* Merge
-* Filtros e Máscaras
-* Visualização de Dados
-* Indicadores de Negócio
-
----
+- Análise Exploratória de Dados (EDA)
+- Limpeza e tratamento de dados
+- Manipulação com Pandas
+- GroupBy e agregações
+- Merge entre bases
+- Filtros e máscaras
+- Criação de indicadores de negócio
+- Visualização de dados
 
 ## 👨‍💻 Autor
 
-**Cleyton Pereira dos Santos**
+**Cleyton Pereira dos Santos** — Tecnólogo em Análise e Desenvolvimento de Sistemas.
 
-Tecnólogo em Análise e Desenvolvimento de Sistemas.
+Foco atual: **Python • Dados • SQL • Automação • IA**
 
-Estudando:
-
-* Python para Dados
-* SQL
-* Power BI
-* Análise de Dados
-* Automação com Python
+[GitHub](https://github.com/DevCleyt)
